@@ -31,9 +31,9 @@ const Hero = () => {
             fill
             className="object-contain"
           />
-          <div className="hero__image-overlay">
-            <Image src="/icons/hero-bg.png" alt="overlay" fill />
-          </div>
+        </div>
+        <div className="hero__image-overlay">
+          <Image src="/icons/hero-bg.png" alt="overlay" fill />
         </div>
       </div>
     </div>
