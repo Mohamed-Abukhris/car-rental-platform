@@ -23,7 +23,7 @@ const CarCard = ({ car }: CarCardProps) => {
   return (
     <div className="car-card group">
       <div className="car-card__content">
-        <h2 className="car-card__title">
+        <h2 className="car-card__content-title">
           {make} {model}
         </h2>
       </div>
@@ -36,6 +36,7 @@ const CarCard = ({ car }: CarCardProps) => {
           /day
         </span>
       </p>
+      <div className="relative w-full h-40 my-3 object-contain"></div>
     </div>
   );
 };
