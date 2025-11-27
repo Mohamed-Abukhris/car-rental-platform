@@ -1,9 +1,9 @@
-// database/schema.ts
 import {
   pgTable,
   serial,
   varchar,
   integer,
+  text,
   numeric,
   timestamp,
   pgEnum,
@@ -16,10 +16,14 @@ export const bookingStatusEnum = pgEnum("booking_status", [
   "cancelled",
 ]);
 
+export const userRoleEnum = pgEnum("user_role", ["USER", "ADMIN"]);
+
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 100 }).notNull(),
   email: varchar("email", { length: 255 }).notNull().unique(),
+  password: text("password").notNull(),
+  role: userRoleEnum("role").notNull().default("USER"),
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()
     .notNull(),

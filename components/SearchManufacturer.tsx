@@ -26,7 +26,6 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: Props) => {
     <div className="search-manufacturer">
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
-          {/* Icon button */}
           <Combobox.Button className="absolute inset-y-0 left-0 flex items-center pl-4">
             <Image
               src="/icons/carlogo.svg"
@@ -37,7 +36,6 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: Props) => {
             />
           </Combobox.Button>
 
-          {/* Input */}
           <Combobox.Input
             className="search-manufacturer__input"
             displayValue={(item: string) => item}
@@ -45,7 +43,6 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: Props) => {
             placeholder="Volkswagen..."
           />
 
-          {/* Dropdown options with Transition */}
           <Transition
             as={Fragment}
             leave="transition ease-in duration-100"

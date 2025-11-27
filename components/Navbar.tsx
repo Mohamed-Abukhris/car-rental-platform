@@ -17,7 +17,7 @@ const NavBar = () => (
 
       <Button
         type="button"
-        className="text-primary-blue rounded-full bg-white min-w-[130px] -mt-3"
+        className="text-primary-blue rounded-full bg-white min-w-[130px] -mt-2"
       >
         Sign in
       </Button>
